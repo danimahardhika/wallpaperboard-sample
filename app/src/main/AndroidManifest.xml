@@ -66,7 +66,7 @@
             </intent-filter>
             <meta-data android:name="color" android:value="@color/muzei_color" />
             <meta-data android:name="settingsActivity"
-                android:value="com.dm.wallpaper.board.demo.activities.MuzeiActivity"/>
+                android:value="com.dm.wallpaper.board.sample.activities.MuzeiActivity"/>
         </service>
 
         <!-- This is important -->
