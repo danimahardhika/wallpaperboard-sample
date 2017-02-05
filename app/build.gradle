@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.CompileSdk
+    buildToolsVersion rootProject.ext.BuildTools
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def file = output.outputFile
+            def appName = parent.name
+            def fileName = appName.replace(" ", "_") +"_v"+ variant.versionName +".apk"
+            output.outputFile = new File(file.parent, fileName)
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.dm.wallpaper.board.sample"
+        minSdkVersion rootProject.ext.MinSdk
+        targetSdkVersion rootProject.ext.TargetSdk
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    /*
+     * WallpaperBoard Library
+     *
+     * How to update?
+     * 1. See latest version at GitHub, https://github.com/danimahardhika/wallpaperboard/releases
+     * 2. Change WallpaperBoard dependency matching latest version
+     * 3. com.github.danimahardhika:wallpaperboard:$versionNumber
+     * 4. Sync Project with Gradle Files
+     * 5. Clean project
+     * 6. Done
+     */
+    compile 'com.github.danimahardhika:wallpaperboard:1.0.0'
+}
