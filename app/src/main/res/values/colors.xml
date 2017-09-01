@@ -15,6 +15,18 @@
     <!-- Toolbar -->
     <color name="toolbarIcon">#FFFFFF</color>
     <color name="toolbarIconDark">#FFFFFF</color>
+    
+    <color name="searchBar">#FFFFFF</color>
+    <color name="searchBarDark">#FFFFFF</color>
+    <color name="searchBarIcon">#6E6E6E</color>
+    <color name="searchBarIconDark">#6E6E6E</color>
+
+    <color name="tabIndicator">#20AC6B</color>
+    <color name="tabIndicatorDark">#20AC6B</color>
+    <color name="tabSelected">#20AC6B</color>
+    <color name="tabSelectedDark">#20AC6B</color>
+    <color name="tab">#6E6E6E</color>
+    <color name="tabDark">#E9FFFFFF</color>
 
     <!-- Navigation View -->
     <color name="navigationViewTitle">#FFFFFF</color>
@@ -45,8 +57,5 @@
 
     <color name="dividerList">#18000000</color>
     <color name="dividerListDark">#18FFFFFF</color>
-
-    <!-- Favorite Wallpaper -->
-    <color name="favoriteColor">#DC4316</color>
 
 </resources>
