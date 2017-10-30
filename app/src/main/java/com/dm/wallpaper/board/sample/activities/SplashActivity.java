@@ -1,14 +1,17 @@
 package com.dm.wallpaper.board.sample.activities;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.support.annotation.NonNull;
 
 import com.dm.wallpaper.board.activities.WallpaperBoardSplashActivity;
+import com.dm.wallpaper.board.activities.configurations.SplashScreenConfiguration;
+import com.dm.wallpaper.board.sample.R;
 
 public class SplashActivity extends WallpaperBoardSplashActivity {
 
+    @NonNull
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        initSplashActivity(savedInstanceState, MainActivity.class);
+    public SplashScreenConfiguration onInit() {
+        return new SplashScreenConfiguration(MainActivity.class)
+                .setBottomText(getString(R.string.splash_screen_title));
     }
 }
