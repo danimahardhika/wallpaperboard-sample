@@ -5,11 +5,10 @@ android {
     buildToolsVersion rootProject.ext.BuildTools
 
     android.applicationVariants.all { variant ->
-        variant.outputs.each { output ->
-            def file = output.outputFile
+        variant.outputs.all { output ->
             def appName = parent.name
-            def fileName = appName.replace(" ", "_") +"_v"+ variant.versionName +".apk"
-            output.outputFile = new File(file.parent, fileName)
+            def fileName = appName.replace(" ", "_")
+            outputFileName = "$fileName-v${variant.versionName}.apk"
         }
     }
 
@@ -31,7 +30,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     /*
      * WallpaperBoard Library
@@ -44,5 +43,5 @@ dependencies {
      * 5. Clean project
      * 6. Done
      */
-    compile 'com.github.danimahardhika:wallpaperboard:1.5.4'
+    implementation 'com.github.danimahardhika:wallpaperboard:1.5.4'
 }
