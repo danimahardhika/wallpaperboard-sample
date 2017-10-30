@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 
 import com.dm.wallpaper.board.activities.WallpaperBoardActivity;
 import com.dm.wallpaper.board.activities.configurations.ActivityConfiguration;
-import com.dm.wallpaper.board.demo.licenses.License;
+import com.dm.wallpaper.board.sample.licenses.License;
 
 public class MainActivity extends WallpaperBoardActivity {
 
